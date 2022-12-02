@@ -1,0 +1,19 @@
+<div th:fragment="formulario-categoria">
+
+    <div class = "row">
+       
+        <div class="col col-md">
+            <label>ID</label>
+            <input maxlength="50" type="text" class="form-control" name="ID" placeholder="ID" th:field="*{ID}" readonly>
+            <div th:if="${#fields.hasErrors('ID')}" th:errors="*{ID}"></div>
+        </div>
+        <div class="col col-md">
+            <label>Categorias</label>
+            <input maxlength="50" type="text" class="form-control" name="Categorias" placeholder="Categorias" th:field="*{Categorias}" required>
+            <div th:if="${#fields.hasErrors('Categorias')}" th:errors="*{Categorias}"></div>
+        </div>
+    </div>
+
+    
+
+</div>

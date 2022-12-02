@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Inventario Usuarios</title>
+
+    <!-- Bootstrap core CSS -->
+    <link th:href="@{css/loginStyle.css}" rel="stylesheet">
+    <link th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css}" rel="stylesheet">
+    <link th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css}" rel="stylesheet">
+
+
+</head>
+<body>
+    <div class="container">
+        <div class="screen">
+            <div class="screen__content">
+                <form class="login">
+                    <div class="login__field">
+                        <i class="login__icon fas fa-user"></i>
+                        <input type="text" name = "email" class="login__input" placeholder="User name / Email">
+                    </div>
+                    <div class="login__field">
+                        <i class="login__icon fas fa-lock"></i>
+                        <input type="password" name = "password" class="login__input" placeholder="Password">
+                    </div>
+                    <button class="button login__submit" onclick ="validateLogin()">
+                        <span class="button__text">Log In Now</span>
+                        <i class="button__icon fas fa-chevron-right"></i>
+                    </button>
+                </form>
+                <div class="social-login">
+                    <h3>log in via</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-login__icon fab fa-instagram"></a>
+                        <a href="#" class="social-login__icon fab fa-facebook"></a>
+                        <a href="#" class="social-login__icon fab fa-twitter"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="screen__background">
+                <span class="screen__background__shape screen__background__shape4"></span>
+                <span class="screen__background__shape screen__background__shape3"></span>
+                <span class="screen__background__shape screen__background__shape2"></span>
+                <span class="screen__background__shape screen__background__shape1"></span>
+            </div>
+        </div>
+    </div>
+    <script>
+        function validateLogin(){
+            if(document.getElementsByName('email')[0].value == "admin@admin.com"
+                && document.getElementsByName('password')[0].value == "admin"){
+                window.open("categorias");
+            }
+        }
+    </script>
+</body>
+</html>

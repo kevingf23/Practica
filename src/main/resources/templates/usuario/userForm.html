@@ -1,0 +1,39 @@
+<div th:fragment="formulario-usuario">
+
+    <div class = "row">
+        <div class="col col-md">
+            <label >ID</label>
+            <input maxlength="10" type="text" class="form-control" name="idUsuario" placeholder="ID" th:field="*{ID}" readonly>
+            <div th:if="${#fields.hasErrors('ID')}" th:errors="*{ID}"></div>
+        </div>
+        <div class="col col-md">
+            <label>Nombres</label>
+            <input maxlength="50" type="text" class="form-control" name="nombreUsuario" placeholder="Nombres" th:field="*{Nombres}" required>
+            <div th:if="${#fields.hasErrors('Nombres')}" th:errors="*{Nombres}"></div>
+        </div>
+        <div class="col col-md">
+            <label>Apellidos </label>
+            <input maxlength="50" type="text" class="form-control" name="apellidoUsuario" placeholder="Apellidos" th:field="*{Apellidos}" required>
+            <div th:if="${#fields.hasErrors('Apellidos')}" th:errors="*{Apellidos}"></div>
+        </div>
+    </div>
+
+    <div class = "row mt-2">
+        <div class="col col-md">
+            <label >Correo</label>
+            <input maxlength="50" type="text" class="form-control" name="correoUsuario" placeholder="Correo" th:field="*{Correo}" required>
+            <div th:if="${#fields.hasErrors('Correo')}" th:errors="*{Correo}"></div>
+        </div>
+        <div class="col col-md">
+            <label >Contraseña</label>
+            <input maxlength="100" type="password" class="form-control" name="contraseñaUsuario" placeholder="Contraseña" th:field="*{Contrasena}" required>
+            <div th:if="${#fields.hasErrors('Contrasena')}" th:errors="*{Contrasena}"></div>
+        </div>
+        <div class="col col-md">
+            <label >Tipo Usuario</label>
+            <input maxlength="50" type="text" class="form-control" name="tipoUsuario" placeholder="Tipo Usuario" th:field="*{Tipo_Usuario}" required>
+            <div th:if="${#fields.hasErrors('Tipo_Usuario')}" th:errors="*{Tipo_Usuario}"></div>
+        </div>
+    </div>
+
+</div>

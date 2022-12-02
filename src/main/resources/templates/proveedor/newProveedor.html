@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.com">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Agregar Proveedor | Inventario</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body style="background:  #C0C0C0;">
+  <!--NavBar-->
+  <header th:insert="fragments/navbar :: menu-principal"></header>
+
+
+    <form th:action="@{''}" th:object="${proveedores}" method="post">
+    <div class="card mx-4">
+      <div class="card-header">
+        <b>Agregar Proveedor</b>
+      </div>
+      <div class="card-body">
+        <div class = "row mt-2">
+          <div class="col col-md">
+            <label>ID</label>
+            <input type="text" class="form-control" placeholder="ID" aria-label="ID" disabled>
+          </div>
+          <div  class="col col-md">
+            <label>Nombre Proveedor</label>
+            <input class="form-control"type="text" placeholder="Nombre Proveedor" th:field="*{NombreProveedor}">
+          </div>
+        </div>
+        <div class = "row mt-2">
+          <div class="col col-md">
+            <label>Categoria Proveedor</label>
+            <input class="form-control" type="text" placeholder="Categoria Proveedor"
+              th:field="*{CategoriaProveedor}">
+          </div>
+          <div class="col col-md">
+            <label>NIT</label>
+            <input class="form-control" type="text" placeholder="NIT" th:field="*{NIT}">
+          </div>
+          </div>
+          <div class = "row mt-2">
+          <div class="col col-md">
+            <label>NRC</label>
+            <input class="form-control" type="text" placeholder="NRC" th:field="*{NRC}">
+          </div>
+          <div class="col col-md">
+            <label>Direccion </label>
+            <input class="form-control" type="text" placeholder="Direccion" th:field="*{Direccion}">
+          </div>
+          </div>
+          <div class = "row mt-2">
+          <div class="col col-md">
+            <label for="Telefono">Telefono</label><br>
+            <input class="form-control" type="text" placeholder="Telefono" th:field="*{Telefono}">
+            <div th:if="${#fields.hasErrors('Telefono')}" th:errors="*{Telefono}"></div>
+          </div>
+          <div class="col col-md">
+            <label for="Calificacion">Calificacion Proveedor</label><br>
+            <input class="form-control" type="text" placeholder="Calificacion" th:field="*{Calificacion}">
+            
+            </div>
+            <div col="col col-md">
+              <div class="col col-md">
+                <button class="btn btn-success mt-2">Ingresar</button>
+              </div>
+            </div>
+          </div>
+
+          
+        </div>
+      </div>
+      
+    </form>
+   
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

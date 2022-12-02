@@ -1,0 +1,46 @@
+
+<div th:fragment="formulario-salida">
+
+    <div class = "row">
+        <div class="col col-md">
+            <label >ID</label>
+            <input maxlength="10" type="text" class="form-control" name="idCompras" placeholder="ID" th:field="*{ID}" readonly>
+            <div th:if="${#fields.hasErrors('ID')}" th:errors="*{ID}"></div>
+        </div>
+        <div class="col col-md">
+            <label>Producto</label>
+            <select class="form-select" name="idProductos" th:field="*{ProductoID}" required>
+                <option value="" selected>Seleccione Producto</option>
+                <option th:each="producto : ${producto}" th:value="${producto.ID}" th:text="${producto.Nombre_Producto}"></option>
+            </select>
+        </div>
+    </div>
+
+    <div class = "row">
+        <div class="col col-md">
+            <label >Lote</label>
+            <input maxlength="50" type="text" class="form-control" name="loteCompras" placeholder="Lote" th:field="*{Lote}" required>
+            <div th:if="${#fields.hasErrors('Lote')}" th:errors="*{Lote}"></div>
+        </div>
+        <div class="col col-md">
+            <label>Precio</label>
+            <input type="number" min="0" max="1000" step="0.01" class="form-control" name="precioCompra" placeholder="Precio" th:field="*{Precio}" required>
+            <div th:if="${#fields.hasErrors('Precio')}" th:errors="*{Precio}"></div>
+        </div>
+        <div class="col col-md">
+            <label>Cantidad </label>
+            <input type="number" min="0" max="1000" step="1" class="form-control" name="cantidadCompra" placeholder="Cantidad" th:field="*{Cantidad}" required>
+            <div th:if="${#fields.hasErrors('Cantidad')}" th:errors="*{Cantidad}"></div>
+        </div>
+    </div>
+
+    <div class = "row">
+        <div class="col col-md">
+            <label >Fecha_Salida</label>
+            <input type="date" class="form-control" name="fechaSalida" placeholder="Fecha_Salida" th:field="*{Fecha_Salida}" required>
+            <div th:if="${#fields.hasErrors('Fecha_Salida')}" th:errors="*{Fecha_Salida}"></div>
+        </div>
+        
+    </div>
+
+</div>

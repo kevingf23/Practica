@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.com">
+<head>
+  <meta charset="UTF-8">
+  <title>Editar Proveedor | Inventario</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+<!--NavBar-->
+<header th:insert="fragments/navbar :: menu-principal"></header>
+
+
+<section style="text-align: center;">
+  <form th:action="@{''}" th:object="${proveedores}" method="post">
+    <div>
+      <label for="CodigoProveedor">Codigo Proveedor</label><br>
+      <input id="CodigoProveedor" type="text" placeholder="Codigo Proveedor" th:field="*{CodigoProveedor}">
+      <div th:if="${#fields.hasErrors('CodigoProveedor')}" th:errors="*{CodigoProveedor}"></div>
+    </div>
+    <div>
+      <label for="NombreProveedor">Nombre Proveedor</label><br>
+      <input id="NombreProveedor" type="text" placeholder="Nombre Proveedor" th:field="*{NombreProveedor}">
+
+    </div>
+    <div>
+      <label for="CategoriaProveedor">Categoria Proveedor</label><br>
+      <input id="CategoriaProveedor" type="text" placeholder="Categoria Proveedor" th:field="*{CategoriaProveedor}">
+    </div>
+    <div>
+      <label for="NIT">NIT</label><br>
+      <input id="NIT" type="text" placeholder="NIT" th:field="*{NIT}">
+      <div th:if="${#fields.hasErrors('NIT')}" th:errors="*{NIT}"></div>
+    </div>
+    <div>
+      <label for="NRC">NRC</label><br>
+      <input id="NRC" type="text" placeholder="NRC" th:field="*{NRC}">
+      <div th:if="${#fields.hasErrors('NRC')}" th:errors="*{NRC}"></div>
+    </div>
+    <div>
+      <label for="Direccion">Direccion</label><br>
+      <input id="Direccion" type="text" placeholder="Direccion" th:field="*{Direccion}">
+    </div>
+    <div>
+      <label for="Telefono">Telefono</label><br>
+      <input id="Telefono" type="text" placeholder="Telefono" th:field="*{Telefono}">
+      <div th:if="${#fields.hasErrors('Telefono')}" th:errors="*{Telefono}"></div>
+    </div>
+    <div>
+      <label for="Calificacion">Calificacion</label><br>
+      <input id="Calificacion" type="text" placeholder="Calificacion" th:field="*{Calificacion}"><br><br>
+      <button class="btn btn-success">Ingresar</button>
+    </div>
+  </form>
+</section>
+<script>$</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<div th:fragment="formulario-producto">
+
+
+    <div class = "row">
+        <div class="col col-md">
+            <label >ID</label>
+            <input maxlength="10" type="text" class="form-control" name="idProductos" placeholder="ID" th:field="*{ID}" readonly>
+            <div th:if="${#fields.hasErrors('ID')}" th:errors="*{ID}"></div>
+        </div>
+        <div class="col col-md">
+            <label>Nombre Productos</label>
+            <input maxlength="50" type="text" class="form-control" name="nombreProductos" placeholder="Nombre Producto" th:field="*{Nombre_Producto}" required>
+            <div th:if="${#fields.hasErrors('Nombre_Producto')}" th:errors="*{Nombre_Producto}"></div>
+        </div>
+    </div>
+
+    <div class = "row mt-2">
+        <div class="col col-md">
+
+            <label>Categoria </label>
+            <select class="form-select" name="categoriaProductos" th:field="*{Categoria_ID}" required>
+                <option value="" selected>Seleccione Categoria</option>
+                <option th:each="categoria : ${categoria}" th:value="${categoria.ID}" th:text="${categoria.Categorias}"></option>
+            </select>
+            <div th:if="${#fields.hasErrors('Categoria_ID')}" th:errors="*{Categoria_ID}"></div>
+
+
+        </div>
+
+        <div class="col col-md">
+            <label >Proveedor</label>
+            <select class="form-select" name="proveedorProductos" th:field="*{Proveedor_ID}" required>
+                <option value="" selected>Seleccione Proveedor</option>
+                <option th:each="proveedor : ${proveedor}" th:value="${proveedor.ID}" th:text="${proveedor.NombreProveedor}"></option>
+            </select>
+            <div th:if="${#fields.hasErrors('Proveedor_ID')}" th:errors="*{Proveedor_ID}"></div>
+        </div>
+
+    </div>
+
+    <div class = "row mt-2">
+        <div class="col col-md">
+            <label >Existencia Minima</label>
+            <input type="number" min="0" max="1000" step="1" class="form-control" name="existenciaMinProveedor" placeholder="Existencia Minima" th:field="*{Existencia_Min}" required>
+            <div th:if="${#fields.hasErrors('Existencia_Min')}" th:errors="*{Existencia_Min}"></div>
+        </div>
+        <div class="col col-md">
+            <label >Existencia Maxima</label>
+            <input type="number" min="0" max="1000" step="1" class="form-control" name="existenciaMaxProveedor" placeholder="Existencia Maxima" th:field="*{Existencia_Max}" required>
+            <div th:if="${#fields.hasErrors('Existencia_Max')}" th:errors="*{Existencia_Max}"></div>
+        </div>
+    </div>
+
+    <div class = "row mt-2">
+        <div class="col col-md">
+            <label >Precio</label>
+            <input type="number" min="0" max="1000" step="0.01" class="form-control" name="precioProducto" placeholder="Precio" th:field="*{Precio}" required>
+            <div th:if="${#fields.hasErrors('Precio')}" th:errors="*{Precio}"></div>
+        </div>
+        <div class="col col-md">
+            <label >Costo</label>
+            <input type="number" min="0" max="1000" step="0.01" class="form-control" name="costoProducto" placeholder="Costo" th:field="*{Costo}" required>
+            <div th:if="${#fields.hasErrors('Costo')}" th:errors="*{Costo}"></div>
+        </div>
+    </div>
+    <div class = "row mt-2">
+        <div class="col col-md">
+            <label >Unidad Medida</label>
+            <input maxlength="50" type="text" class="form-control" name="unidadMedidaProducto" placeholder="Unidad Medida" th:field="*{Unidad_Medida}" required>
+            <div th:if="${#fields.hasErrors('Unidad_Medida')}" th:errors="*{Unidad_Medida}"></div>
+        </div>
+        <div class="col col-md">
+            <label >Ubicacion Bodega</label>
+            <input maxlength="100" type="text" class="form-control" name="ubicacionBodegaProducto" placeholder="Ubicacion Bodega" th:field="*{Ubicacion_Bodega}" required>
+            <div th:if="${#fields.hasErrors('Ubicacion_Bodega')}" th:errors="*{Ubicacion_Bodega}"></div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,90 @@
+  
+  
+  <!--NavBar-->
+  <nav th:fragment="menu-principal" class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/principal">Inventario</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <!--DropDown Usuarios-->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownUsuarios" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        Usuarios
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownUsuarios">
+                        <li><a class="dropdown-item" href="/users/view">Ver Usuarios</a></li>
+                        <li><a class="dropdown-item" href="/users/new">Agregar Usuarios</a></li>
+                    </ul>
+                </li>
+                <!--DropDown Productos-->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownProductos" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        Productos
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownProductos">
+                        <li><a class="dropdown-item" href="/products/view">Ver Productos</a></li>
+                        <li><a class="dropdown-item" href="/products/new">Agregar Productos</a></li>
+                    </ul>
+                </li>
+                <!--DropDown Proveedores-->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownProveedores" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Proveedores
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownProveedores">
+                        <li><a class="dropdown-item" href="/proveedor/viewproveedores">Ver Proveedores</a></li>
+                        <li><a class="dropdown-item" href="/proveedor/newproveedor">Agregar Proveedores</a></li>
+                    </ul>
+                </li>
+                <!--DropDown Categorias-->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCategorias" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Categorias
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownCategorias">
+                        <li><a class="dropdown-item" href="/viewcategoria">Ver Categorias</a></li>
+                        <li><a class="dropdown-item" href="/addCategoria">Agregar Categorias</a></li>
+                    </ul>
+                </li>
+
+                <!--DropDown Compras-->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCompras" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        Compras
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownCompras">
+                        <li><a class="dropdown-item" href="/compras/view">Ver Compras</a></li>
+                        <li><a class="dropdown-item" href="/compras/new">Agregar Compras</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCompras" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        Salidas
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownCompras">
+                        <li><a class="dropdown-item" href="/salidas/view">Ver Salidas</a></li>
+                        <li><a class="dropdown-item" href="/salidas/new">Agregar Salidas</a></li>
+                    </ul>
+                </li>
+
+                <!-- Cerrar Sesion -->
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:8080/">Cerrar Sesión</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
