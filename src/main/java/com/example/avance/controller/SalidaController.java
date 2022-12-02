@@ -1,4 +1,4 @@
-package com.example.avanceunidad3.controller;
+package com.example.avance.controller;
 
 import java.util.List;
 
@@ -18,9 +18,9 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 
-import com.example.avanceunidad3.model.Salida;
-import com.example.avanceunidad3.repository.IProductoRepository;
-import com.example.avanceunidad3.repository.SalidaRepository;
+import com.example.avance.model.Salida;
+import com.example.avance.repository.IProductoRepository;
+import com.example.avance.repository.SalidaRepository;
 
 @Controller
 @RequestMapping("salidas")

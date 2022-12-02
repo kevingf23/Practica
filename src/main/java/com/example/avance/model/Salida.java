@@ -1,4 +1,4 @@
-package com.example.avanceunidad3.model;
+package com.example.avance.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

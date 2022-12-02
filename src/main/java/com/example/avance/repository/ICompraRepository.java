@@ -1,6 +1,6 @@
-package com.example.avanceunidad3.repository;
+package com.example.avance.repository;
 
-import com.example.avanceunidad3.model.Compra;
+import com.example.avance.model.Compra;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ICompraRepository extends JpaRepository<Compra, Integer> {

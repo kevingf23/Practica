@@ -1,9 +1,9 @@
-package com.example.avanceunidad3.controller;
+package com.example.avance.controller;
 
-import com.example.avanceunidad3.model.Producto;
-import com.example.avanceunidad3.repository.CategoriaRepository;
-import com.example.avanceunidad3.repository.IProductoRepository;
-import com.example.avanceunidad3.repository.ProveedoresRepository;
+import com.example.avance.model.Producto;
+import com.example.avance.repository.CategoriaRepository;
+import com.example.avance.repository.IProductoRepository;
+import com.example.avance.repository.ProveedoresRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

@@ -1,6 +1,6 @@
-package com.example.avanceunidad3.repository;
+package com.example.avance.repository;
 
-import com.example.avanceunidad3.model.Usuario;
+import com.example.avance.model.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface IUsuariosRepository extends JpaRepository<Usuario, Integer> {

@@ -1,8 +1,8 @@
-package com.example.avanceunidad3.controller;
+package com.example.avance.controller;
 
-import com.example.avanceunidad3.model.Compra;
-import com.example.avanceunidad3.repository.ICompraRepository;
-import com.example.avanceunidad3.repository.IProductoRepository;
+import com.example.avance.model.Compra;
+import com.example.avance.repository.ICompraRepository;
+import com.example.avance.repository.IProductoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

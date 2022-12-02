@@ -1,4 +1,4 @@
-package com.example.avanceunidad3.controller;
+package com.example.avance.controller;
 
 
 import java.util.List;
@@ -17,8 +17,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.example.avanceunidad3.model.Categoria;
-import com.example.avanceunidad3.repository.CategoriaRepository;
+import com.example.avance.model.Categoria;
+import com.example.avance.repository.CategoriaRepository;
 
 
 
